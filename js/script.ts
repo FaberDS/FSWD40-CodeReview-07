@@ -20,7 +20,7 @@ class place implements basic{
         return `
         <div class="itemContainer col-lg-3 col-md-6 col-sm-12 ${this.type} " val="${this.time.getTime()}" >
 				<div class="contentContainer">
-					<div class="d-none d-md-block d-lg-block "><img src="${this.image}" alt="Flash City"></div>
+					<div class="d-none d-md-block d-lg-block text-center"><img class="text-center" src="${this.image}" alt="Flash City"></div>
 					<div class="detail text-xs-center text-sm-center text-md-left">
 						<address class="add">
                             <h3>${this.name}</h3>
@@ -29,9 +29,9 @@ class place implements basic{
                             ${this.city}<br>
                             ${this.country}
                         </address>
-                        <p class="visitDate">Visited on the: ${this.time.toDateString()}</p>
+                        <p class="visitDate">Posted: ${this.time.toDateString()}</p>
                     </div>
-                    <div class="type"><p>${this.type}</p></div>
+                    <div class="type ${this.type}Btn"><p>${this.type}</p></div>
 				</div>
 			</div>
         `
@@ -57,7 +57,7 @@ class restaurant extends place implements basicRestaurant{
         <div class="itemContainer col-lg-3 col-md-6 col-sm-12 ${this.type} " val="${this.time.getTime()}">
 
 				<div class="contentContainer">
-					<div class="d-none d-md-block d-lg-block "><img src="${this.image}" alt="Flash City"></div>
+					<div class="d-none d-md-block d-lg-block text-center"><img class="text-center" src="${this.image}" alt="Flash City"></div>
 					<div class="detail text-xs-center text-sm-center text-md-left ">
                         <address class="add">
                             <h3>${this.name}</h3>
@@ -73,9 +73,9 @@ class restaurant extends place implements basicRestaurant{
                             <a href="${this.homepage}"><i class="fas fa-at"></i>Homepage</a></br>
                             <img src="https://png.icons8.com/ios/50/000000/chair.png" class="chair">${this.seats}
                         </p>
-                        <p class="visitDate">Visited on the: ${this.time.toDateString()}</p>
+                        <p class="visitDate">Posted: ${this.time.toDateString()}</p>
                     </div>
-                    <div class="type"><p>${this.type}</p></div>
+                    <div class="type ${this.type}Btn"><p>${this.type}</p></div>
 				</div>
 			</div>
         `
@@ -99,7 +99,7 @@ class eVent extends place implements basicEvent{
         <div class="itemContainer col-lg-3 col-md-6 col-sm-12 ${this.type} " val="${this.time.getTime()}">
 
 				<div class="contentContainer">
-					<div class="d-none d-md-block d-lg-block "><img src="${this.image}" alt="Flash City"></div>
+					<div class="d-none d-md-block d-lg-block text-center"><img class="text-center" src="${this.image}" alt="Flash City"></div>
                     <div class="detail text-xs-center text-sm-center text-md-left">
                     <address class="add">
                     <h3>${this.eventStar}</h3>
@@ -112,9 +112,9 @@ class eVent extends place implements basicEvent{
                         The event was at: ${this.eventTime} PM
                     </p>
                     
-                        <p class="visitDate">Visited on the: ${this.time.toDateString()}</p>
+                        <p class="visitDate">Posted: ${this.time.toDateString()}</p>
                     </div>
-                    <div class="type"><p>${this.type}</p></div>
+                    <div class="type ${this.type}Btn"><p>${this.type}</p></div>
 				</div>
 			</div>
         `
